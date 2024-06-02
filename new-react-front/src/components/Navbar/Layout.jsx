@@ -18,12 +18,6 @@ export default function Layout ({children}) {
     return (
         <div className="flex flex-col  md:mx-auto max-w-screen px-0 bg-gray-100">
             <Header/>
-            <div className=" absolute top-16 h-8">
-                {sidebarVisible && <div className="w-96 sticky top-16 h-8 bg-gray-100"></div>}
-                <div className={`w-full fixed top-16 h-8 bg-gray-100 z-10 ${sidebarVisible ? 'left-72' : ''}`}></div>
-            </div>
-
-            
             <div className="flex gap-10">
                 {/* Sidebar */}
                 <Sidebar sidebarVisible={sidebarVisible}/>
@@ -33,7 +27,7 @@ export default function Layout ({children}) {
                     <HeadingPage toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
                     {/* Page Content */}
                     <section className="mt-44">
-                        <div className="mx-auto  sm:px-3 lg:px-8">
+                        <div className="mx-auto sm:px-3 lg:px-8">
                             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                                 <div className=" text-gray-900 p-0 ">
                                     {children}

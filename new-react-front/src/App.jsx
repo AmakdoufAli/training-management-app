@@ -18,6 +18,7 @@ import Login from './pages/auth/Login';
 import NotFound from './pages/NotFound/NotFound';
 import Utilisateurs from './pages/GestionUtilisateur/utilisateurs';
 import AjouterUt from './components/listeUtilisateurs/ajouterUt';
+import DoubleForm from './components/listeUtilisateurs/DoubleForm';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
           <Route path='/institut/edit/:id' element={<ModifierInstitut/>} />
           <Route path='/users' element={<Utilisateurs/>} />
           <Route path='/ajouterUser' element={<AjouterUt/>} />
+          <Route path='/modifierUser/:id' element={<DoubleForm/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

@@ -1,10 +1,21 @@
 import { Link, useLocation } from "react-router-dom"
+import { useNavigate } from "react-router";
+import { useState } from "react";
+
 
 export default function Sidebar ({sidebarVisible}) {
 
     const location = useLocation();
 
     const role = JSON.parse(localStorage.getItem('user')).role;
+    const navigate = useNavigate();
+
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
+  
+    const logout = () =>{
+      localStorage.removeItem('user');
+      navigate('/login');
+    }
 
 
     return (
@@ -16,8 +27,8 @@ export default function Sidebar ({sidebarVisible}) {
             </div>
 
             {/* Liens de navigation */}
-            <div>
-                <Link to={"/"} className={`p-2.5 mt-16 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black ${location.pathname === '/' && 'bg-blue-2'}`}>
+            <div className="mt-20">
+                <Link to={"/"} className={`p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black ${location.pathname === '/' && 'bg-blue-2'}`}>
                     <i className="bi bi-speedometer text-white text-2xl ml-2"></i>
                     <span className="text-[15px] ml-4 text-white font-bold">Dashboard</span>
                 </Link>
@@ -43,21 +54,25 @@ export default function Sidebar ({sidebarVisible}) {
                 </>}
                 <Link to={"/listInstituts"} className={`p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black ${location.pathname === '/listInstituts' || location.pathname === '/ajouterInst' ? 'bg-blue-2' : ''}`}>
                     <i className="bi bi-card-list text-2xl text-white ml-1"></i>
-                    <span className="text-[15px] ml-4 text-white font-bold">Gestion Des Instituts</span>
+                    <span className="text-[15px] ml-4 text-white font-bold">{role == "admin" ? 'Gestion Des' : 'Liste Des'} Instituts</span>
                 </Link>
                 <hr className='mx-11 my-1'/>
                 <Link to={"/listeFormateurs"} className={`p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black ${location.pathname === '/listeFormateurs' || location.pathname === '/ajouterFrm' ? 'bg-blue-2' : ''}`}>
                     <i className="bi bi-card-list text-2xl text-white ml-1"></i>
-                    <span className="text-[15px] ml-4 text-white font-bold">Gestion Des Formateurs</span>
+                    <span className="text-[15px] ml-4 text-white font-bold">{role == "admin" ? 'Gestion Des' : 'Liste Des'} Formateurs</span>
                 </Link>
                 <hr className='mx-11 my-1'/>
                 {role === "admin" && <>
                     <Link to={"/users"} className={`p-2.5  flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black ${location.pathname === '/users' || location.pathname === '/ajouterUser' ? 'bg-blue-2' : ''}`}>
-                        <i className="bi bi-speedometer text-white text-2xl ml-2"></i>
-                        <span className="text-[15px] ml-4 text-white font-bold">Gestion Des Utilisateurs</span>
+                        <i className="bi bi-speedometer text-white text-2xl"></i>
+                        <span className="text-[15px] ml-4 text-white font-bold">{role == "admin" ? 'Gestion Des' : 'Liste Des'} Utilisateurs</span>
                     </Link>
                     <hr className='mx-11 my-1'/>
                 </>}
+                <div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black">
+                    <img src="/images/deconnecter.png" className='h-7 w-6'/>
+                    <button  className="text-[15px] ml-4 text-white font-bold" onClick={logout}>Se deconnecter</button>
+                </div>
 
                 
                 {/* <hr className='mx-11 my-1'/>
@@ -76,10 +91,7 @@ export default function Sidebar ({sidebarVisible}) {
                     <Link to='#' className="text-[15px] ml-4 text-white font-bold">Journal d'absence</Link>
                 </div>
                 <hr className='mx-11 my-1'/>
-                <div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-2 text-black">
-                    <img src="/images/deconnecter.png" className='h-7 w-6 ml-3'/>
-                    <Link to='#' className="text-[15px] ml-4 text-white font-bold">Se deconnecter</Link>
-                </div> */}
+ */}
                 
             </div>
           </div>

@@ -81,7 +81,7 @@ export default function Step1 (props) {
       </div>
 
       <div className="flex items-center gap-3 justify-end">
-        <button type="submit" className="py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-green-500">Suivant</button>
+        <button type="submit" className="py-1 px-4 text-md font-medium text-center text-white rounded-lg" style={{backgroundColor: "#F5A962"}}>Suivant</button>
       </div>
 
     </form>

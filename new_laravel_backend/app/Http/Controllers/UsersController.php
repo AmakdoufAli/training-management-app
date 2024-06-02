@@ -51,6 +51,14 @@ class UsersController extends Controller
 
         return $User;
     }
+    public function updatePassword(Request $request, string $id)
+    {
+        $User = User::findOrFail($id);
+        $User->password = bcrypt($request->password);
+        $User->save();
+
+        return $User;
+    }
 
     /**
      * Remove the specified resource from storage.

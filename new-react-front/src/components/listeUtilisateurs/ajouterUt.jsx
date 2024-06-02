@@ -40,18 +40,18 @@ export default function AjouterUt(){
                 <form onSubmit={(e)=>SendInfos(e)} >
                 <div className="grid grid-cols-2 gap-8">
                         <div>
-                            <label htmlFor="name" className="m-1 text-gray-700 text-sm font-medium">Nom</label>
-                            <input type="text" onChange={(e)=>{setUserData({...userData, name: e.target.value})}} name="name" id="name" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"  required autoFocus />
+                            <label htmlFor="name" className="m-1 text-gray-700 text-base font-medium">Nom</label>
+                            <input type="text" onChange={(e)=>{setUserData({...userData, name: e.target.value})}} name="name" id="name" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-2.5"  required autoFocus />
                         </div>
                        
                         <div className='w-full'>
-                            <label htmlFor="email" className="m-1 text-gray-700 text-sm font-medium">Email</label>
-                            <input type="email" onChange={(e)=>{setUserData({...userData, email: e.target.value})}} name="email" id="email" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
+                            <label htmlFor="email" className="m-1 text-gray-700 text-base font-medium">Email</label>
+                            <input type="email" onChange={(e)=>{setUserData({...userData, email: e.target.value})}} name="email" id="email" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-2.5 " required/>
                         </div>
 
                         <div className='w-full'>
-                            <label htmlFor="role" className="m-1 text-gray-700 text-sm font-medium">Role</label>
-                            <select id="role" name="role" onChange={(e)=>{setUserData({...userData, role: e.target.value})}} className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required autoComplete="role">
+                            <label htmlFor="role" className="m-1 text-gray-700 text-base font-medium">Role</label>
+                            <select id="role" name="role" onChange={(e)=>{setUserData({...userData, role: e.target.value})}} className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-2.5 " required autoComplete="role">
                                 <option value=""></option>
                                 <option value="admin">Admin</option>
                                 <option value="gestionnaire">Gestionnaire</option>
@@ -59,13 +59,13 @@ export default function AjouterUt(){
                         </div>
 
                         <div className='w-full'>
-                            <label htmlFor="password" className="m-1 text-gray-700 text-sm font-medium">Password</label>
-                            <input type="password" onChange={(e)=>{setUserData({...userData, password: e.target.value})}} name="password" id="password" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
+                            <label htmlFor="password" className="m-1 text-gray-700 text-base font-medium">Password</label>
+                            <input type="password" onChange={(e)=>{setUserData({...userData, password: e.target.value})}} name="password" id="password" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-2.5 " required/>
                         </div>
 
                         <div className='w-full'>
-                            <label htmlFor="password_confirmation" className="m-1 text-gray-700 text-sm font-medium">Confirme Password</label>
-                            <input type="password" onChange={(e)=>{setUserData({...userData, password_confirmation: e.target.value})}} name="password_confirmation" id="password_confirmation" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
+                            <label htmlFor="password_confirmation" className="m-1 text-gray-700 text-base font-medium">Confirme Password</label>
+                            <input type="password" onChange={(e)=>{setUserData({...userData, password_confirmation: e.target.value})}} name="password_confirmation" id="password_confirmation" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-2.5 " required/>
                         </div>
                     
                     </div>

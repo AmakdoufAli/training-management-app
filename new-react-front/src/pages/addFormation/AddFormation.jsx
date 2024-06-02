@@ -41,10 +41,20 @@ export default function AddFormation(){
 
     return (
         <Layout>
-            <div className="w-full bg-white mb-32">
+            <div className="w-full bg-white mb-10">
                 <div className="">
-                    <h1 className="text-2xl font-semibold bg-orange-1 p-5 text-white" style={{ 'borderRadius': '10px 10px 0 0' }}>Formulaire De Planification</h1>
-                    <div className="p-2 bg-gray-1 flex flex-row items-center justify-center ">
+                    <header>
+                        <div className="">
+                            <div style={{backgroundColor: "#F5A962"}} className=" overflow-hidden w-full shadow-sm  rounded-t-lg">
+                                <div className="p-3 text-gray-900 flex justify-between">
+                                    <div className="flex justify-start items-center ">
+                                        <h1 className="text-[20px] ml-2 text-white  mr-5">Formulaire De Planification</h1>
+                                    </div>      
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div className="p-1 bg-gray-1 flex flex-row items-center justify-center ">
                         <div className={`w-8 h-8 flex items-center justify-center rounded-full text-white font-semibold bg-blue-500`}>{step > 1 ? <i className="bi bi-check text-2xl"></i> : 1}</div>
                         <div className={`w-32 h-2 ${step >= 2 ? 'bg-blue-500' : 'bg-white'}`}></div>
                         <div className={`w-8 h-8 flex items-center justify-center rounded-full font-semibold ${step >= 2 ? 'bg-blue-500 text-white' : 'bg-white'}`}>{step > 2 ? <i className="bi bi-check text-2xl"></i> : 2}</div>

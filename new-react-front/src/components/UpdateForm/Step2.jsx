@@ -159,7 +159,7 @@ export default function Step2(props){
 
             <div className="flex items-center justify-between my-5">
                 <h1 className="text-2xl font-medium">Animateur</h1>
-                <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-green-400" onClick={()=>{setMode(!mode)}}>{mode ? "Ajouter Animateur" : "Choisire Animateur"}</button>
+                <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700" style={{backgroundColor: "#3c8dad"}} onClick={()=>{setMode(!mode)}}>{mode ? "Ajouter Animateur" : "Choisire Animateur"}</button>
             </div>
 
             {mode && (
@@ -262,17 +262,17 @@ export default function Step2(props){
                             </select>
                         </div>
                         <div>
-                            <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-fuchsia-700 w-full h-fit" onClick={()=>creerSpecialite()}>Ajouter Specialité</button>
+                            <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 w-full h-fit bg-gray-400" onClick={()=>creerSpecialite()}>Ajouter Specialité</button>
                         </div>
                     </div>
                     <div className="flex justify-center items-end">
-                        <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-green-400 w-full h-fit" onClick={()=>AjouterAnimateur()}>Ajouter Animateur</button>
+                        <button type="button" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 w-full h-fit" style={{backgroundColor: "#3c8dad"}} onClick={()=>AjouterAnimateur()}>Ajouter Animateur</button>
                     </div>
                 </div>
             )}
 
-            <div className="flex items-center gap-3 justify-end">
-                <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-blue-500">Suivant</button>
+            <div className="flex items-center gap-3 justify-end my-5">
+                <button type="submit" style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg">Suivant</button>
             </div>
 
         </form>

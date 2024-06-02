@@ -27,7 +27,7 @@ export default function Dashboard () {
             <Layout>
                 <header>
                     <div className="mb-20">
-                        <div style={{backgroundColor: "#F5A962"}} className=" overflow-hidden w-full shadow-sm  rounded-t-lg">
+                        <div style={{backgroundColor: "#F5A962"}} className="overflow-hidden w-full shadow-sm  rounded-t-lg">
                             <div className="p-3 text-gray-900 flex justify-between">
                                 
                                 <div className="flex justify-start items-center ">

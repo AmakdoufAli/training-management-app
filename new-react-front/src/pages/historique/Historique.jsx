@@ -29,7 +29,7 @@ export default function Historique() {
               </div>
             </header>  
         <table className='text-sm text-left rtl:text-right text-gray-500 w-full'>
-          <thead className='text-xs text-left text-gray-700 uppercase bg-gray-50'>
+          <thead className='border-b text-md text-left text-gray-700 uppercase bg-gray-50'>
             <tr>
               <th className='px-6 py-3'>id</th>
               <th className='px-6 py-3'>titre</th>
@@ -42,7 +42,7 @@ export default function Historique() {
           </thead>
           <tbody>
             {formations && formations.map((formation)=>(
-              <tr key={formation.id} className='odd:text-black odd:dark:bg-gray-100 even:bg-gray-50'>
+              <tr key={formation.id} className='odd:text-black odd:dark:bg-gray-100 even:bg-gray-50  border-b'>
                   <td className='px-6 py-3'>{formation.id}</td>
                   <td className='px-6 py-3'>{formation.titre}</td>
                   <td className='px-6 py-3'>{formation.date_debut}</td>

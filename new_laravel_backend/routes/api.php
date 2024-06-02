@@ -68,6 +68,8 @@ Route::apiResource('/users', UsersController::class);
 
 Route::post('/findUser', [UsersController::class, 'findUser']);
 
+Route::put('/updatepassword/{id}', [UsersController::class, 'updatePassword']);
+
 Route::post('/send-email', [MailController::class, 'sendEmail']);
 
 Route::get('/detaching/{id}', [BrouillonsController::class, 'detaching']);

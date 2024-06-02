@@ -30,67 +30,81 @@ export default function AjouterF(props){
             </header>  
             
             {/* formulaire */}
-            <div className="px-3 py-4">
-                <form onSubmit={(e)=>SendInfos(e)} className="grid grid-cols-2 gap-y-4">
+            <div className="container mx-auto px-4 py-4 ">
+                <form onSubmit={(e)=>SendInfos(e)} >
+                    <div className="grid grid-cols-2 gap-8">
+
+                    
                         <div>
                             <label htmlFor="nom" className="m-1 text-gray-700 text-sm font-medium">nom</label>
-                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, nom: e.target.value})}} name="nom" id="nom" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5"  required />
+                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, nom: e.target.value})}} name="nom" id="nom" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"  required />
                         </div>
-                        <div className='w-full'>
+                        <div >
                             <label htmlFor="prenom" className="m-1 text-gray-700 text-sm font-medium">prenom</label>
-                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, prenom: e.target.value})}} name="prenom" id="prenom" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, prenom: e.target.value})}} name="prenom" id="prenom" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
                         
+                    
 
-                        <div className='w-full'>
+                    
+                        <div >
                             <label htmlFor="cin" className="m-1 text-gray-700 text-sm font-medium">cin</label>
-                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, cin: e.target.value})}} name="cin" id="cin" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, cin: e.target.value})}} name="cin" id="cin" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
-                        <div className='w-full'>
+                        <div >
                             <label htmlFor="dateNaiss" className="m-1 text-gray-700 text-sm font-medium">Date Naissane</label>
-                            <input type="date" onChange={(e)=>{setFormateurData({...formateurData, dateNaiss: e.target.value})}} name="dateNaiss" id="dateNaiss" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                            <input type="date" onChange={(e)=>{setFormateurData({...formateurData, dateNaiss: e.target.value})}} name="dateNaiss" id="dateNaiss" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
                         
+                    
 
-                        <div className='w-full'>
-                        <label htmlFor="tel" className="m-1 text-gray-700 text-sm font-medium">Tél</label>
-                        <input type="text" onChange={(e)=>{setFormateurData({...formateurData, tel: e.target.value})}} name="tel" id="tel" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                    
+                        <div >
+                            <label htmlFor="tel" className="m-1 text-gray-700 text-sm font-medium">Tél</label>
+                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, tel: e.target.value})}} name="tel" id="tel" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
-                        <div className='w-full'>
-                        <label htmlFor="email" className="m-1 text-gray-700 text-sm font-medium">Email</label>
-                        <input type="email" onChange={(e)=>{setFormateurData({...formateurData, email: e.target.value})}} name="email" id="email" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                        <div >
+                            <label htmlFor="email" className="m-1 text-gray-700 text-sm font-medium">Email</label>
+                            <input type="email" onChange={(e)=>{setFormateurData({...formateurData, email: e.target.value})}} name="email" id="email" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
+                    
 
-                        <div className='w-full'>
+                    
+                        <div >
                             <label htmlFor="niveau_academique" className="m-1 text-gray-700 text-sm font-medium">Niveau academique</label>
-                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, niveau_academique: e.target.value})}} name="niveau_academique" id="niveau_academique" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5 " required/>
+                            <input type="text" onChange={(e)=>{setFormateurData({...formateurData, niveau_academique: e.target.value})}} name="niveau_academique" id="niveau_academique" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
                         </div>
-                        <div className="w-full">
-                        <label className="text-sm font-medium" htmlFor="specialite_id">Spécialité :</label>
-                        <select name="specialite_id" id="specialite_id" onChange={(e)=>{setFormateurData({...formateurData, specialite_id: parseInt(e.target.value)})}} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5" required>
-                            <option value="">--specialite--</option>
-                            {props.specialites && props.specialites.map(spec => (
-                                <option key={spec.id} value={spec.id}>{spec.nom}</option>
-                            ))}
-                        </select>
+                        
+                        <div >
+                            <label className="text-sm font-medium" htmlFor="specialite_id">Spécialité :</label>
+                            <select name="specialite_id" id="specialite_id" onChange={(e)=>{setFormateurData({...formateurData, specialite_id: parseInt(e.target.value)})}} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
+                                <option value="">--specialite--</option>
+                                {props.specialites && props.specialites.map(spec => (
+                                    <option key={spec.id} value={spec.id}>{spec.nom}</option>
+                                ))}
+                            </select>
                         </div>
+                    
 
-                        <div className="">
+                    
+                        <div className="w-full">
                             <label className="text-sm font-medium" htmlFor="specialite_id">institut (de travail) :</label>
-                            <select name="institut_id" id="institut_id" onChange={(e)=>{setFormateurData({...formateurData, institut_id: parseInt(e.target.value)})}} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-9/12 p-2.5" required>
+                            <select name="institut_id" id="institut_id" onChange={(e)=>{setFormateurData({...formateurData, institut_id: parseInt(e.target.value)})}} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required>
                                 <option value="">--instituts--</option>
                                 {props.instituts && props.instituts.map(inst => (
                                     <option key={inst.id} value={inst.id}>{inst.nom}</option>
                                 ))}
                             </select>
                         </div>
-
-
-                    <div className="flex items-center gap-2 mt-4 col-span-2">
-                        <button type="submit" style={{backgroundColor: "#3c8dad"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg mr-0">Enregistrer</button>
-                        <button type="reset"  className="py-1 px-4 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-300 mr-0">Annuler</button>
-                        <Link to={"/listeFormateurs"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
                     </div>
+
+
+                        <div className=" flex items-end gap-2 justify-end mt-8">
+                            <button type="submit" style={{backgroundColor: "#3c8dad"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg mr-0">Enregistrer</button>
+                            <button type="reset"  className="py-1 px-4 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-300 mr-0">Annuler</button>
+                            <Link to={"/listeFormateurs"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
+                        </div>
+                    
                 </form>
 
             </div>

@@ -30,6 +30,9 @@ export const suivie_formation_api = createApi({
     getUsers: builder.query({
       query: () => "/users",
     }),
+    getUserById: builder.query({
+      query: (id) => `/users/${id}`,
+    }),
     getFormateurById: builder.query({
       query: (formateurId) => `/formateurs/${formateurId}`,
     }),
@@ -139,6 +142,7 @@ export const {
   useGetBrouillonsQuery,
   useGetUsersQuery,
   useGetBrouillonsByIdQuery,
+  useGetUserByIdQuery,
   useGetFormationByIdQuery,
   useGetDocumentationByIdQuery,
   useGetFormateurByIdQuery,

@@ -205,8 +205,8 @@ export default function Step3(props){
 
             <div className="flex items-center gap-3 justify-end">
                 {/* <button type="button" className="py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-400" onClick={()=>{props.setStep(props.step - 1)}}>Précedent</button> */}
-                <button type="button" className="py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-orange-400 hover:bg-orange-500" onClick={()=>SendInfos(1)}>Enregistrer</button>
-                <button type="button" className="py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-blue-1 hover:bg-blue-600" onClick={()=>SendInfos(2)}>Valider</button>
+                <button type="button" style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg " onClick={()=>SendInfos(1)}>Enregistrer</button>
+                <button type="button" style={{backgroundColor: "#3c8dad"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg mr-0" onClick={()=>SendInfos(2)}>Valider</button>
             </div>
 
         </form>

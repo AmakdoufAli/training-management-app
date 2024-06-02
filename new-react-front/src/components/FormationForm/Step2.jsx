@@ -147,7 +147,7 @@ export default function Step2(props){
 
             <div className="flex items-center justify-between my-5">
                 <h1 className="text-2xl font-medium">Animateur</h1>
-                <button type="button" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 bg-blue-2" onClick={()=>{setMode(!mode)}}>{mode ? "Ajouter Animateur" : "Choisire Animateur"}</button>
+                <button type="button" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700" style={{backgroundColor: "#3c8dad"}} onClick={()=>{setMode(!mode)}}>{mode ? "Ajouter Animateur" : "Choisire Animateur"}</button>
             </div>
 
             {mode && (
@@ -251,7 +251,7 @@ export default function Step2(props){
                             </select>
                         </div>
                         <div>
-                            <button type="button" className="py-3 px-5 font-medium text-center rounded-lg bg-primary-700 bg-gray-1 w-full h-fit" onClick={()=>creerSpecialite()}>Ajouter Specialité</button>
+                            <button type="button" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-400 w-full h-fit" onClick={()=>creerSpecialite()}>Ajouter Specialité</button>
                         </div>
                     </div>
                     <div className="flex justify-center items-end">
@@ -263,7 +263,7 @@ export default function Step2(props){
             <div className="flex items-center gap-3 justify-end">
                 {/* <button type="button" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-400" onClick={()=>{props.setStep(props.step - 1)}}>Précedent</button> */}
                 {/* <button type="submit" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 bg-blue-500" onClick={()=>{console.log(props.data)}}>Enregistrer</button> */}
-                <button type="submit" className="py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 bg-orange-400 hover:bg-orange-500">Suivant</button>
+                <button type="submit" style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Suivant</button>
             </div>
 
         </form>
