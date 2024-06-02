@@ -1,0 +1,79 @@
+h2 {
+    background-color: #F5A962;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .formation-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .formation-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .numero {
+    width: 90px;
+    height: 44px;
+    background-color: #b7b7b2;
+    color: white;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .formation-title {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+  
+  .formation-date {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .button-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* .button-group button {
+    margin-left: 10px;
+    background-color: #F5A962;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  } */
+  
+  .button-group button:hover {
+    background-color: #F5A962;
+    border-radius: 20px;
+  }
+  
+  .space {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 0 10px;
+  }
+  
+  .slash {
+    margin: 0 10px;
+    color: #ccc;
+}

@@ -1,0 +1,113 @@
+
+import { Link } from "react-router-dom"
+
+
+export default function Afficher(props){
+//    const users=[
+//     {
+//         "id": 1,
+//         "name": "Amakdouf Ali",
+//         "email": "ali@gmail.com",
+//         "role": "admin",
+//         "email_verified_at": "2024-05-24T19:09:10.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     },
+//     {
+//         "id": 2,
+//         "name": "Donna Gottlieb",
+//         "email": "amely54@example.net",
+//         "role": "gestionnaire",
+//         "email_verified_at": "2024-05-24T19:09:11.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     },
+//     {
+//         "id": 3,
+//         "name": "Jennie McClure",
+//         "email": "candice82@example.com",
+//         "role": "gestionnaire",
+//         "email_verified_at": "2024-05-24T19:09:11.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     },
+//     {
+//         "id": 4,
+//         "name": "Laila Orn",
+//         "email": "friesen.richie@example.com",
+//         "role": "gestionnaire",
+//         "email_verified_at": "2024-05-24T19:09:11.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     },
+//     {
+//         "id": 5,
+//         "name": "Eveline Marquardt",
+//         "email": "vboyle@example.org",
+//         "role": "gestionnaire",
+//         "email_verified_at": "2024-05-24T19:09:11.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     },
+//     {
+//         "id": 6,
+//         "name": "Shanie King",
+//         "email": "qparisian@example.net",
+//         "role": "gestionnaire",
+//         "email_verified_at": "2024-05-24T19:09:11.000000Z",
+//         "created_at": "2024-05-24T19:09:11.000000Z",
+//         "updated_at": "2024-05-24T19:09:11.000000Z"
+//     }]
+    
+    return (
+        <div className="bg-white mb-32">
+            <header>
+                <div className="m-0 mb-2">
+                    <div style={{backgroundColor: "#F5A962"}} className=" overflow-hidden w-full h-14 shadow-sm  rounded-t-lg">
+                        <div className="p-2 text-gray-900 flex justify-between">
+                            <div className="flex justify-start items-center ">
+                                <h1 className="text-[20px] ml-2 text-white  mr-5"> Liste des utilisateurs </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            
+            {/* boutton d'ajout */}
+            <div className="mt-6 ml-3 mb-6">
+              <Link to={"/ajouterUser"} style={{backgroundColor: "#3c8dad"}} className="py-2 px-6 text-md font-medium text-center text-white rounded-lg ">Ajouter</Link>
+            </div>
+
+            {/* tableau d'affichage */}
+            <div >
+                <table className='text-sm text-left rtl:text-right text-gray-500 w-full'>
+                    <thead className='border-b text-md text-left text-gray-700 uppercase bg-gray-50'>
+                        <tr>
+                        <th className='px-6 py-3'>id</th>
+                        <th className='px-6 py-3'>Name</th>
+                        <th className='px-6 py-3'>Email</th>
+                        <th className='px-6 py-3'>Role</th>
+                        <th className='px-6 py-3'>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {props.users && props.users.map((user)=>(
+                        <tr key={user.id} className='odd:text-black odd:dark:bg-gray-100 even:bg-gray-50 even:bg-gray-50  border-b'>
+                            <td className='px-6 py-3'>{user.id}</td>
+                            <td className='px-6 py-3'>{user.name}</td>
+                            <td className='px-6 py-3'>{user.email}</td>
+                            <td className='px-6 py-3'>{user.role}</td> 
+                            <td className='px-6 py-3 flex'>
+                                <a href={`modifier/${user.id}`} className='mr-2 rounded text-orange-950 bg-orange-200' title="modifier"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"> <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" /></svg></a>
+                                <a href={`modifier/${user.id}`} className='text-red-800 bg-red-300 mr-2 rounded' title="supprimer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"><path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" /></svg></a>
+                            </td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    )
+}

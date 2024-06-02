@@ -1,0 +1,88 @@
+/* Style de base du corps de la page */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style du titre de la liste des instituts */
+.users-page h1 {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #F5A962;
+    padding: 15px 20px; /* Ajout de la marge intérieure */
+    border-radius: 5px; /* Ajout de la bordure arrondie */
+    color: #fff; /* Couleur du texte */
+}
+
+/* Style du bouton "Ajouter Institut" */
+.addNewUser {
+    text-align: right;
+    margin-bottom: 27px;
+}
+
+.addNewUser .btn {
+    padding: 10px 16px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Style de la liste des instituts */
+.users-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style des cellules de la table */
+.users-list td, .users-list th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style des boutons dans les cellules de la table */
+.users-list .btn {
+    padding: 6px 12px;
+    background-color: #17a2b8;    
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Style spécifique pour le bouton "Supprimer" */
+.users-list .btn-danger {
+    background-color: #dc3545;
+}
+
+/* Style spécifique pour le bouton "Modifier" */
+.users-list .btn-edit {
+    background-color: #17a2b8;   
+     margin-right: 10px; 
+    
+}
+/* Style de l'espace entre les boutons */
+.btn-space {
+    display: inline-block;
+    width: 10px; /* Ajustez la largeur selon vos besoins */
+}
+
+.users-list tbody tr:nth-child(odd) {
+    background-color: #fff; /* Couleur de fond blanche */
+}
+
+/* Style des lignes paires */
+.users-list tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond grise */
+}.users-list tbody tr:nth-child(odd) {
+    background-color: #fff; /* Couleur de fond blanche */
+}
+
+/* Style des lignes paires */
+.users-list tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond grise */
+}
+  
+  

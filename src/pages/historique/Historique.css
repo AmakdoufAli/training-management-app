@@ -1,0 +1,25 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+table th,
+table td{
+    padding: 8px;
+    border: 2px solid black;
+}
+
+table th{
+    text-align: center;
+    font-weight: bold;
+}
+table td{
+    text-align: center;
+}
+
+button{
+    background-color: rgb(228, 67, 18);
+    border-radius: 12px;
+}
+
