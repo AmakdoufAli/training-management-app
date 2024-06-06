@@ -50,7 +50,7 @@ export default function ModifierInstitut () {
                             <div className="p-3 text-gray-900 flex justify-between">
                                 
                                 <div className="flex justify-start items-center ">
-                                    <h1 className="text-[20px] ml-2 text-white  mr-5">List Des Instituts</h1>
+                                    <h1 className="text-[20px] ml-2 text-white  mr-5">Modification de l'institut</h1>
                                 </div>      
                             </div>
                         </div>
@@ -103,7 +103,7 @@ export default function ModifierInstitut () {
                         <div className="flex items-end gap-2 justify-end mt-5">
                             <button type="submit" style={{backgroundColor: "#3c8dad"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg mr-0">Enregistrer</button>
                             <button type="reset"  className="py-1 px-4 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-400 mr-0">Annuler</button>
-                            <Link to={"/users"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
+                            <Link to={"/listInstituts"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
                         </div>
                     </form>
 

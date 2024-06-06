@@ -17,17 +17,16 @@ export default function Historique() {
     <Layout>
       <div className='space-y-10'>
         <header>
-              <div className="">
-                  <div style={{backgroundColor: "#F5A962"}} className=" overflow-hidden w-full shadow-sm  rounded-t-lg">
-                      <div className="p-3 text-gray-900 flex justify-between">
-                          
-                          <div className="flex justify-start items-center ">
-                              <h1 className="text-[20px] ml-2 text-white  mr-5">List des formations</h1>
-                          </div>      
-                      </div>
-                  </div>
+            <div className="">
+              <div style={{backgroundColor: "#F5A962"}} className=" overflow-hidden w-full shadow-sm  rounded-t-lg">
+                <div className="p-3 text-gray-900 flex justify-between">
+                  <div className="flex justify-start items-center ">
+                    <h1 className="text-[20px] ml-2 text-white mr-5">List des formations</h1>
+                  </div>  
+                </div>
               </div>
-            </header>  
+            </div>
+          </header>  
         <table className='text-sm text-left rtl:text-right text-gray-500 w-full'>
           <thead className='border-b text-md text-left text-gray-700 uppercase bg-gray-50'>
             <tr>

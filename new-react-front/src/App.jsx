@@ -19,6 +19,8 @@ import NotFound from './pages/NotFound/NotFound';
 import Utilisateurs from './pages/GestionUtilisateur/utilisateurs';
 import AjouterUt from './components/listeUtilisateurs/ajouterUt';
 import DoubleForm from './components/listeUtilisateurs/DoubleForm';
+import DetailsForm from './pages/detailsInstForm/DetailsForm';
+import DetailsInst from './pages/detailsInstForm/DetailsInst';
 
 function App() {
 
@@ -36,7 +38,9 @@ function App() {
           <Route path='/ajouterInst' element={<AjouterInst/>} />
           <Route path='/ajouterFrm' element={<AjouterFormateur/>} />
           <Route path='/listInstituts' element={<ListeInstituts/>} />
+          <Route path='/detailsInstituts/:id' element={<DetailsInst/>} />
           <Route path='/listeFormateurs' element={<ListeFormateurs/>} />
+          <Route path='/detailsFormateurs/:id' element={<DetailsForm/>} />
           <Route path='/formateur/edit/:id' element={<ModifierFormateur/>} />
           <Route path='/institut/edit/:id' element={<ModifierInstitut/>} />
           <Route path='/users' element={<Utilisateurs/>} />

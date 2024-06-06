@@ -31,7 +31,7 @@ class FormateursController extends Controller
      */
     public function show(string $id)
     {
-        return Formateur::findOrFail($id);
+        return Formateur::with('institut.ville', 'specialite', 'formations')->find($id);
     }
 
     /**

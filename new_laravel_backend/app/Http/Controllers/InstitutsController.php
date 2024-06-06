@@ -12,7 +12,7 @@ class InstitutsController extends Controller
      */
     public function index()
     {
-        return Institut::with('specialites')->distinct('nom')->get();
+        return Institut::with('specialites', 'ville')->distinct('nom')->get();
         // $instituts = Institut::with('ville', 'specialites')->get();
         // return response()->json($instituts);
 
@@ -31,7 +31,7 @@ class InstitutsController extends Controller
      */
     public function show(string $id)
     {
-        return Institut::findOrFail($id);
+        return Institut::with('specialites', 'ville')->find($id);
     }
 
     /**

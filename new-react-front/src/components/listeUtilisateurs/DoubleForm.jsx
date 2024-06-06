@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../../components/template/Layout';
 import { useGetUserByIdQuery } from '../../features/apiSlice';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 
 const DoubleForm = () => {
+
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+
+  useEffect(()=>{
+      if(!localStorage.getItem('user')){
+        navigate('/login');
+      }else{
+        setShow(true);
+      }
+  },[]);
 
   const { id } = useParams();
   const { data: userdata, refetch } = useGetUserByIdQuery(id);

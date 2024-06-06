@@ -5,10 +5,9 @@ export default function HeadingPage ({toggleSidebar, sidebarVisible}) {
 
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
 
-
     return (
         <header>
-          <div className={`top-24 fixed ${sidebarVisible ? 'w-[1063px]' : 'w-full'} sm:px-6 lg:px-8 mt-0`}>
+          <div className={`top-24 fixed ${sidebarVisible ? 'w-[1059px]' : 'w-full'} sm:px-6 lg:px-8 mt-0`}>
             <div style={{backgroundColor: "#85C8DD"}} className=" overflow-hidden shadow-sm sm:rounded-lg">
               <div className="p-2 text-gray-900 flex justify-between">
                 <div className="flex justify-start">
@@ -21,7 +20,7 @@ export default function HeadingPage ({toggleSidebar, sidebarVisible}) {
                     <img src="/images/profil.png" width="46" height="46" alt="User icon" />
                     <div className="-space-y-2">
                       <div className="text-white font-bold text-lg">{user && user.name}</div>
-                      <div className="text-white font-sans">{user.role}</div>
+                      <div className="text-white font-sans">{user && user.role}</div>
                     </div>
                   </div>
                 </div>

@@ -114,11 +114,10 @@ export default function ModifierFormateur(){
                             </div>
                         </div>
 
-
                         <div className="flex items-end gap-2 justify-end mt-8">
                             <button type="submit" style={{backgroundColor: "#3c8dad"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg mr-0">Enregistrer</button>
                             <button type="reset"  className="py-1 px-4 text-md font-medium text-center text-white rounded-lg bg-primary-700 bg-gray-400 mr-0">Annuler</button>
-                            <Link to={"/users"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
+                            <Link to={"/listeFormateurs"} style={{backgroundColor: "#F5A962"}} className="py-1 px-4 text-md font-medium text-center text-white rounded-lg ">Retour</Link>
                         </div>
                     </form>
 

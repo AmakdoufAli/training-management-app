@@ -26,7 +26,7 @@ export default function Dashboard () {
         show && (
             <Layout>
                 <header>
-                    <div className="mb-20">
+                    <div className="">
                         <div style={{backgroundColor: "#F5A962"}} className="overflow-hidden w-full shadow-sm  rounded-t-lg">
                             <div className="p-3 text-gray-900 flex justify-between">
                                 
@@ -37,36 +37,34 @@ export default function Dashboard () {
                         </div>
                     </div>
                 </header>  
-                <div className="grid grid-cols-2 gap-5 mb-40 ">
+                <div className="grid grid-cols-2 gap-5 mb-40 absolute -z-10 py-14 w-11/12">
                     <div className="">
                         <BarChart
                             series={[
-                                { data: [35, 44, 24, 34] },
-                                { data: [51, 6, 49, 30] },
-                                { data: [15, 25, 30, 50] },
-                                { data: [60, 50, 15, 25] },
+                                { data: [10, 15, 20, 25], color: 'rgb(133, 200, 221)' },
+                                { data: [8, 12, 18, 22], color: 'rgb(245, 169, 98)' },
                             ]}
                             height={290}
                             xAxis={[{ data: ['Q1', 'Q2', 'Q3', 'Q4'], scaleType: 'band' }]}
-                            margin={{ top: 10, bottom: 30, left: 40, right: 10 }}
                         />
                     </div>
-                    <div className="flex items-center justify-center">
+                    <div className="flex flex-col items-center justify-center">
+                        <h1 className="text-gray-700 font-thin underline text-lg">Statistique sur les formations</h1>
                         <PieChart
                             series={[
                                 {
-                                data: [
-                                    { id: 0, value: 10, label: 'series A' },
-                                    { id: 1, value: 15, label: 'series B' },
-                                    { id: 2, value: 20, label: 'series C' },
-                                ],
+                                    data: [
+                                        { id: 0, value: 5, label: 'Passé', color: 'rgb(133, 200, 221)' },
+                                        { id: 1, value: 2, label: 'En coure', color: 'rgb(245, 169, 98)' },
+                                        { id: 2, value: 1, label: 'Pas encore', color: 'rgb(221, 221, 221)' },
+                                    ],
                                 },
                             ]}
                             width={400}
                             height={200}
                         />
                     </div>
-                    <div className="h-60">
+                    {/* <div className="h-60">
                         <Gauge
                             value={75}
                             startAngle={-110}
@@ -93,7 +91,7 @@ export default function Dashboard () {
                             height={100}
                         />
                         </Box>
-                    </div>
+                    </div> */}
                 </div>
             </Layout>
         )

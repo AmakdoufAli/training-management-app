@@ -33,9 +33,9 @@ export default function Layout ({children}) {
                     <HeadingPage toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
                     {/* Page Content */}
                     <section className="mt-44">
-                        <div className="mx-auto  sm:px-3 lg:px-8">
+                        <div className="mx-auto sm:px-3 lg:px-8">
                             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div className=" text-gray-900 p-0 ">
+                                <div className=" text-gray-900">
                                     {children}
                                 </div>
                             </div>

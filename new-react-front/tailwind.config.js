@@ -11,7 +11,6 @@ module.exports = {
         'gray-1': "rgb(221, 221, 221)",
         'blue-1': "rgb(60, 141, 173)",
         'blue-3': "rgb(18, 93, 152)",
-        'gray-1': "rgb(221, 221, 221)",
         'blue-4': "#3c8dad",
       }
     },
