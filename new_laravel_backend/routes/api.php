@@ -78,6 +78,9 @@ Route::delete('/documentationByIdFormation/{id}', [DocumentationController::clas
 
 Route::delete('/notificationByIdFormation/{id}', [NotificationsController::class, 'deleteByIdFormation']);
 
+Route::get('/regions/formations/count', [RegionsController::class, 'countFormation']);
+
+Route::get('/etats/formations/count', [FormationsController::class, 'etatFormation']);
 
 
 

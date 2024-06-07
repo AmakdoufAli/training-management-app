@@ -21,4 +21,9 @@ class Institut extends Model
         return $this->belongsToMany(Specialite::class, 'institut_specialites');
     }
 
+    public function formateurs()
+    {
+        return $this->hasMany(Formateur::class);
+    }
+
 }

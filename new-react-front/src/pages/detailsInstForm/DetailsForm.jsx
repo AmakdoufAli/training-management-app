@@ -54,13 +54,13 @@ const DetailsForm = () => {
                   </td>
                   <td className="text-xl bg-blue-50 p-3">{formateur?.cin}</td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Nom:
                   </td>
                   <td className="text-xl bg-blue-50 p-3">{formateur?.nom}</td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Prénom:
                   </td>
@@ -68,7 +68,7 @@ const DetailsForm = () => {
                     {formateur?.prenom}
                   </td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Date de Naissance:
                   </td>
@@ -76,7 +76,7 @@ const DetailsForm = () => {
                     {formateur?.dateNaiss}
                   </td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Email:
                   </td>
@@ -89,13 +89,13 @@ const DetailsForm = () => {
                     </a>
                   </td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Téléphone:
                   </td>
                   <td className="text-xl bg-blue-50 p-3">{formateur?.tel}</td>
                 </tr>
-                <tr className="border-b border-white">
+                <tr className="border-b-2 border-white">
                   <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                     Niveau Académique:
                   </td>
@@ -118,7 +118,7 @@ const DetailsForm = () => {
                       {formateur?.institut.nom}
                     </td>
                   </tr>
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Adresse:
                     </td>
@@ -126,7 +126,7 @@ const DetailsForm = () => {
                       {formateur?.institut.adresse}
                     </td>
                   </tr>
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Nom du Directeur:
                     </td>
@@ -134,7 +134,7 @@ const DetailsForm = () => {
                       {formateur?.institut.nom_directeur}
                     </td>
                   </tr>
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Téléphone:
                     </td>
@@ -142,7 +142,7 @@ const DetailsForm = () => {
                       {formateur?.institut.tel_institut}
                     </td>
                   </tr>
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Email:
                     </td>
@@ -155,7 +155,7 @@ const DetailsForm = () => {
                       </a>
                     </td>
                   </tr>
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Ville:
                     </td>
@@ -172,7 +172,7 @@ const DetailsForm = () => {
               <h2 className="text-3xl font-semibold pb-3">Spécialité</h2>
               <table className="w-full">
                 <tbody className="border">
-                  <tr className="border-b border-white">
+                  <tr className="border-b-2 border-white">
                     <td className="text-xl text-gray-600 font-semibold p-3 bg-blue-100">
                       Nom:
                     </td>

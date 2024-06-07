@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Formation;
 use App\Models\Region;
 use Illuminate\Http\Request;
 
@@ -46,4 +47,39 @@ class RegionsController extends Controller
     {
         //
     }
+
+    public function countFormation()
+    {
+        $regions = Region::all();
+
+        if ($regions->isEmpty()) {
+            return response()->json(['message' => 'Region not found'], 404);
+        }
+
+        $results = [];
+
+        foreach ($regions as $region) {
+            $formationCount = $region->villes->reduce(function($carry, $ville) {
+                return $carry + $ville->formations->where('etat', 1)->count();
+            }, 0);
+            $brouillonsCount = $region->villes->reduce(function($carry, $ville) {
+                return $carry + $ville->formations->where('etat', 0)->count();
+            }, 0);
+
+            if ($formationCount > 0) {
+                $results[] = [
+                    'region' => $region->nom,
+                    'formation_count' => $formationCount,
+                    'brouillons_count' => $brouillonsCount,
+                ];
+            }
+        }
+
+        if (empty($results)) {
+            return response()->json(['message' => 'No formations found in any region'], 404);
+        }
+
+        return response()->json($results);
+    }
+
 }

@@ -29,7 +29,6 @@ export default function ListeInstituts() {
   };
 
   const confirmDelete = () => {
-    // console.log(`Delete institute with ID: ${instituteToDelete}`);
     setShowDeleteModal(false);
   };
 

@@ -57,4 +57,19 @@ class FormationsController extends Controller
         $formation->animateur_id = $request->animateurId;
         $formation->save();
     }
+
+
+    public function etatFormation()
+    {
+        $passe = Formation::where('etat', 1)->where('date_fin', '<', now())->count();
+        $encoure = Formation::where('etat', 1)->where('date_fin', '>', now())->count();
+        $pasencore = Formation::where('etat', 0)->count();
+
+        return response()->json([
+            'passe'=>$passe,
+            'encoure'=>$encoure,
+            'pasencore'=>$pasencore,
+        ]);
+    }
+
 }
