@@ -109,6 +109,6 @@ Use the notifications and evaluation features to keep track of training sessions
 
 - [@Ali Amakdouf](https://github.com/AmakdoufAli)
 - [@Soukaina Abdouh](https://github.com/soukainaSKY)
-- [@Zaheza Bennaqte](https://github.com/zahira9)
+- [@Zahiza Bennaqte](https://github.com/zahira9)
 - [@Mustapha Kemmissa](https://github.com/Mrmustpha)
 
