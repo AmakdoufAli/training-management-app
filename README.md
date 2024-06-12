@@ -72,3 +72,43 @@ To set up this project locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/AmakdoufAli/training-management-app.git
+2. Navigate to the project directory:
+   ```bash
+   cd training-management-app
+3. Install frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+4. Install backend dependencies:
+   ```bash
+   cd ../backend
+   composer install
+5. Set up the database and environment variables:
+   Create a MySQL database.
+   Copy .env.example to .env and update the database credentials.
+6. Run migrations:
+   ```bash
+   php artisan migrate
+6. Start the development servers:
+      - Frontend:
+         ```bash
+         cd ../frontend
+         npm start
+      - Backend:
+         ```bash
+         cd ../backend
+         php artisan serve
+
+## Usage
+
+Access the application at http://localhost:3000 for the frontend and http://localhost:8000 for the backend.
+Navigate through the various sections of the application to manage institutes, trainers, and training sessions.
+Use the notifications and evaluation features to keep track of training sessions and their outcomes.
+
+## Contributors
+
+- [@Ali Amakdouf](https://github.com/AmakdoufAli)
+- [@Soukaina Abdouh](https://github.com/soukainaSKY)
+- [@Zaheza Bennaqte](https://github.com/zahira9)
+- [@Mustapha Kemmissa](https://github.com/Mrmustpha)
+
